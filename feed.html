@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#07080c" />
+    <meta name="description" content="Fable — live chronicle feed" />
+    <title>Fable · Feed</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="feed">
+    <div class="bg-scene" aria-hidden="true"></div>
+
+    <main class="page">
+      <header class="topbar">
+        <div class="logo">Fable</div>
+        <div class="live-badge">
+          <span class="status-dot" id="live-status"></span>
+          Live
+        </div>
+      </header>
+
+      <section id="feed-list" class="feed-list" aria-live="polite" aria-label="Global feed">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Unrolling the chronicle…</p>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main">
+      <a href="profile.html" class="nav-btn" data-nav="profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        Profile
+      </a>
+
+      <a href="games.html" class="nav-btn" data-nav="games">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="6" width="20" height="12" rx="2" />
+          <path d="M6 12h4M8 10v4" />
+          <circle cx="17" cy="10" r="1" fill="currentColor" stroke="none" />
+          <circle cx="15" cy="13" r="1" fill="currentColor" stroke="none" />
+        </svg>
+        Games
+      </a>
+
+      <div class="nav-create-wrap">
+        <button type="button" class="nav-create" data-nav="create" aria-label="Create post">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </button>
+      </div>
+
+      <a href="feed.html" class="nav-btn" data-nav="feed">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5" />
+          <path d="M5 10v10h14V10" />
+        </svg>
+        Feed
+      </a>
+    </nav>
+
+    <!-- Firestore only — images upload via ImgBB -->
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

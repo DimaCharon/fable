@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#07080c" />
+    <meta name="description" content="Fable — games hub" />
+    <title>Fable · Games</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="games">
+    <div class="bg-scene" aria-hidden="true"></div>
+
+    <main class="page">
+      <header class="topbar">
+        <div class="logo">Fable</div>
+        <div class="live-badge">
+          <span class="status-dot" id="live-status"></span>
+          Arena
+        </div>
+      </header>
+
+      <!-- ========== Game catalog hub ========== -->
+      <div id="games-hub">
+        <section class="games-hero glass">
+          <h1>Arena of Legends</h1>
+          <p>Hyper-casual halls, publications &amp; a living social kingdom</p>
+        </section>
+
+        <div class="games-layout">
+          <!-- Row 1: Social flagship -->
+          <section class="games-section" aria-labelledby="sec-social">
+            <div class="section-head">
+              <h2 id="sec-social" class="section-head-title">Social Realm</h2>
+              <span class="section-head-meta">Live economy</span>
+            </div>
+
+            <article class="game-card featured glass">
+              <div class="game-art art-masters">
+                <div class="game-art-inner" aria-hidden="true">👑</div>
+              </div>
+              <div class="game-body">
+                <span class="game-tag live">Live · Social</span>
+                <h3 class="game-title">Masters &amp; Slaves</h3>
+                <p class="game-desc">
+                  Competitive clicker on the real user base. Farm gold, buy freemen,
+                  collect vassals who pay tribute (5% of their value / hour). Prices
+                  rise ×1.20 on every sale. Fetter your prize — or buy your freedom.
+                </p>
+                <div class="game-actions">
+                  <button type="button" class="btn btn-primary" id="open-masters">Play</button>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Dual-color gradient transition -->
+          <div class="section-gradient" aria-hidden="true"></div>
+
+          <!-- Row 2: Publication (middle of list) -->
+          <section class="games-section publication-section" aria-labelledby="sec-pub">
+            <div class="section-head">
+              <h2 id="sec-pub" class="section-head-title">Publication</h2>
+              <span class="section-head-meta">Share the legend</span>
+            </div>
+
+            <article class="publication-card glass">
+              <div class="publication-icon" aria-hidden="true">📜</div>
+              <div class="publication-body">
+                <h3 class="game-title">Chronicle Desk</h3>
+                <p class="game-desc">
+                  Publish a post to the global feed — caption and PNG photo.
+                  Images host on free ImgBB; stories live in Firestore for every
+                  adventurer to see.
+                </p>
+                <ul class="publication-points">
+                  <li>Upload PNG / photos via ImgBB</li>
+                  <li>Realtime feed for all nicknames</li>
+                  <li>Likes with heartbeat animation</li>
+                </ul>
+                <div class="game-actions">
+                  <button type="button" class="btn btn-primary" id="pub-create-btn">
+                    Create publication
+                  </button>
+                  <a href="feed.html" class="btn btn-ghost" data-nav="feed">Open feed</a>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Dual-color gradient transition -->
+          <div class="section-gradient section-gradient--flip" aria-hidden="true"></div>
+
+          <!-- Row 3: Hyper-casual playable games -->
+          <section class="games-section" aria-labelledby="sec-arcade">
+            <div class="section-head">
+              <h2 id="sec-arcade" class="section-head-title">Arcade Halls</h2>
+              <span class="section-head-meta">Playable now</span>
+            </div>
+
+            <div class="games-grid games-grid--balanced">
+              <article class="game-card glass">
+                <div class="game-art art-gates">
+                  <div class="game-art-inner" aria-hidden="true">🚪</div>
+                </div>
+                <div class="game-body">
+                  <span class="game-tag live">Playable</span>
+                  <h3 class="game-title">Multiplier Gates</h3>
+                  <p class="game-desc">
+                    Hyper-casual runner: grow your crowd through math gates (+50, ×2)
+                    and crush the final boss.
+                  </p>
+                  <div class="game-actions">
+                    <button type="button" class="btn btn-primary" data-play-game="gates">
+                      Play
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="game-card glass">
+                <div class="game-art art-castle">
+                  <div class="game-art-inner" aria-hidden="true">🏰</div>
+                </div>
+                <div class="game-body">
+                  <span class="game-tag live">Playable</span>
+                  <h3 class="game-title">Hero Castle Wars</h3>
+                  <p class="game-desc">
+                    Tower puzzle: if player_power &gt; enemy_power, absorb their stats
+                    and clear the floor.
+                  </p>
+                  <div class="game-actions">
+                    <button type="button" class="btn btn-primary" data-play-game="castle">
+                      Play
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="game-card glass">
+                <div class="game-art art-pin">
+                  <div class="game-art-inner" aria-hidden="true">📌</div>
+                </div>
+                <div class="game-body">
+                  <span class="game-tag live">Playable</span>
+                  <h3 class="game-title">Pull the Pin</h3>
+                  <p class="game-desc">
+                    Physics rescue: pull pins to mix lava &amp; water into stone, drop
+                    gold to the hero, and sink monsters.
+                  </p>
+                  <div class="game-actions">
+                    <button type="button" class="btn btn-primary" data-play-game="pin">
+                      Play
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="game-card glass">
+                <div class="game-art art-weapon">
+                  <div class="game-art-inner" aria-hidden="true">🔫</div>
+                </div>
+                <div class="game-body">
+                  <span class="game-tag live">Playable</span>
+                  <h3 class="game-title">Weapon Evolution</h3>
+                  <p class="game-desc">
+                    Runner: shoot numbered cubes, stack +RoF / +Range upgrades, then
+                    blaze the bonus track.
+                  </p>
+                  <div class="game-actions">
+                    <button type="button" class="btn btn-primary" data-play-game="weapon">
+                      Play
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- ========== Mini-game canvas arena ========== -->
+      <section id="mini-arena" class="mini-arena" hidden aria-label="Mini game arena">
+        <a href="#" class="back-link" id="mini-back">← Back to Arena</a>
+        <div class="mini-header glass">
+          <div>
+            <h2 id="mini-title" class="mini-title">Game</h2>
+            <p id="mini-blurb" class="mini-blurb muted"></p>
+          </div>
+          <button type="button" class="btn btn-ghost btn-sm" id="mini-restart">Restart</button>
+        </div>
+        <div id="mini-hud" class="mini-hud glass"></div>
+        <div class="mini-canvas-wrap glass">
+          <canvas id="mini-canvas" width="360" height="486"></canvas>
+        </div>
+        <p id="mini-hint" class="mini-hint muted"></p>
+      </section>
+
+      <!-- ========== Masters & Slaves full game panel ========== -->
+      <section id="ms-panel" class="ms-panel" aria-label="Masters and Slaves">
+        <a href="#" class="back-link" id="ms-back">← Back to Arena</a>
+
+        <div id="ms-root">
+          <div class="ms-hud">
+            <div class="ms-stat-card glass">
+              <div class="label">Gold</div>
+              <div class="value" id="ms-gold">0</div>
+            </div>
+            <div class="ms-stat-card glass">
+              <div class="label">Your price</div>
+              <div class="value" id="ms-price">100</div>
+            </div>
+          </div>
+
+          <div class="ms-stat-card glass" style="margin-bottom: 14px; text-align: center">
+            <div class="label">Passive income</div>
+            <div class="value emerald" id="ms-income">0/h</div>
+          </div>
+
+          <div class="ms-status glass" id="ms-status">
+            <span class="badge badge-free">Free</span>
+            <div>Loading your fate…</div>
+          </div>
+
+          <button type="button" class="btn btn-ghost" id="self-buyout-btn" style="display: none; margin-bottom: 14px">
+            Buy freedom
+          </button>
+
+          <div class="ms-tabs" role="tablist">
+            <button type="button" class="ms-tab active" data-panel="ms-tab-farm">Farm</button>
+            <button type="button" class="ms-tab" data-panel="ms-tab-market">Market</button>
+            <button type="button" class="ms-tab" data-panel="ms-tab-castle">Castle</button>
+          </div>
+
+          <div id="ms-tab-farm" class="ms-tab-panel active">
+            <div class="farm-arena glass">
+              <button type="button" class="farm-btn" id="farm-btn" aria-label="Farm gold">
+                ⛏️
+              </button>
+              <p class="farm-hint">Tap the mine — +5 gold per strike</p>
+            </div>
+          </div>
+
+          <div id="ms-tab-market" class="ms-tab-panel">
+            <p class="section-label" style="margin-top: 0">Freemen &amp; thralls</p>
+            <div id="ms-market-list">
+              <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Scouting the realm…</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="ms-tab-castle" class="ms-tab-panel">
+            <p class="section-label" style="margin-top: 0">My plantation</p>
+            <div id="ms-plantation-list">
+              <div class="empty-state">
+                <div class="emoji">🏰</div>
+                <p>No vassals yet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main">
+      <a href="profile.html" class="nav-btn" data-nav="profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        Profile
+      </a>
+
+      <a href="games.html" class="nav-btn" data-nav="games">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="6" width="20" height="12" rx="2" />
+          <path d="M6 12h4M8 10v4" />
+          <circle cx="17" cy="10" r="1" fill="currentColor" stroke="none" />
+          <circle cx="15" cy="13" r="1" fill="currentColor" stroke="none" />
+        </svg>
+        Games
+      </a>
+
+      <div class="nav-create-wrap">
+        <button type="button" class="nav-create" data-nav="create" aria-label="Create post">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </button>
+      </div>
+
+      <a href="feed.html" class="nav-btn" data-nav="feed">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5" />
+          <path d="M5 10v10h14V10" />
+        </svg>
+        Feed
+      </a>
+    </nav>
+
+    <!-- Firestore only — images use ImgBB (no Storage SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+    <script src="games.js"></script>
+  </body>
+</html>
